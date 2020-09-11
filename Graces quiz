@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+<title>CodePen - 2051-7</title>
+<style>
+body {
+color:yellow;
+background-color: lightgrey;
+background-image: url("https://kids.nationalgeographic.com/content/dam/kidsea/kids-core-objects/backgrounds/1900x1068_herolead_quiz.adapt.1900.1.jpg")
+}
+
+ol{
+color:yellow;
+}
+
+.correct {
+background: green;
+}
+
+.incorrect{
+background: red;
+}
+</style>
+
+
+</head>
+
+<body translate="no" >
+<img src="https://liberties.imgix.net/images/7b325baa-c99c-4377-8818-637fa320a10f/quiz-2004332_960_720.png?ixlib=rails-0.3.2&w=1200&h=630&fit=crop&q=60&fm=jpg&auto=format&trim=auto&lossless=true&s=55dbca53037366e98f8148d7aa42a31e" width="200"/>
+<h1>Grace's Quiz</h1>
+<ol>
+<li>2 x 2 = <input data-correct="4"/></li>
+<li>6 - 3 <input data-correct="3"/></li>
+<li>What is the square root of 9? <input data-correct="3"/></li>
+<li>Who is the vice President? <input data-correct="Mike Pence"/></li>
+</ol>
+<li>How many cents is in 1 dollar? <input data-correct="100"/></li>
+</ol>
+<li>What is the capitol of Washington state? <input data-correct="Olympia"/></li>
+</ol>
+<li>How many days are in a year?<input data-correct="365"/></li>
+</ol>
+<li>How many inches are in a foot?<input data-correct="12"/></li>
+</ol>
+<li>3 x 5=<input data-correct="15"/></li>
+</ol>
+<li>How many seasons are there?<input data-correct="4"/></li>
+</ol>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script id="rendered-js" >
+console.clear();
+
+$("input").change(onChange)
+
+function onChange(evt){
+let correct = $(this).data("correct");
+let response = $(this).val();
+correct = correct.toUpperCase();
+response = response.toUpperCase();
+
+console.log(correct,response);
+if(correct == response){
+$(this).removeClass('incorrect').addClass('correct');
+} else{
+$(this).removeClass('correct').addClass('incorrect');
+}
+}
+</script>
+
+
+</body>
+
+</html>
+
+On Fri, Sep 11, 2020 at 12:47 PM Grace Goodman <gracegoodman@seattleacademy.org> wrote:
+https://codepen.io/Gracecgoodman/pen/mdPxoZM 
